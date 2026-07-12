@@ -276,10 +276,11 @@ export default function Resume() {
               Want a copy? Download the PDF version below.
             </p>
             <a
-              href="mailto:tusharbhanderi1610@gmail.com?subject=Resume Request"
+              href="/Tushar_Bhanderi_Resume.pdf"
+              download="Tushar_Bhanderi_Resume.pdf"
               className="gradient-ring relative inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm bg-text-primary text-bg transition-transform duration-300 hover:scale-105"
             >
-              <span className="relative z-10">Request Resume PDF ↗</span>
+              <span className="relative z-10">Download Resume PDF ↗</span>
             </a>
           </motion.div>
         </div>
