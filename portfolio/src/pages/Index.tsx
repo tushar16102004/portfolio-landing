@@ -10,11 +10,20 @@ import ScrollProgress from "../components/ScrollProgress";
 import Manifesto from "../components/Manifesto";
 
 export default function Index() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    return typeof window !== "undefined" ? !sessionStorage.getItem("hasLoaded") : true;
+  });
 
   return (
     <>
-      {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      {isLoading && (
+        <LoadingScreen
+          onComplete={() => {
+            setIsLoading(false);
+            sessionStorage.setItem("hasLoaded", "true");
+          }}
+        />
+      )}
       <ScrollProgress />
       <main className="bg-bg">
         <Hero />
