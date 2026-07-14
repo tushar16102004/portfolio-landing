@@ -89,9 +89,9 @@ export default function Resume() {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-xs text-muted hover:text-text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-1.5 text-xs text-muted hover:text-text-primary transition-colors mb-8"
             >
-              ← Back to Home
+              <svg className="w-3 h-3 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg> Back to Home
             </Link>
             <h1 className="text-4xl md:text-5xl font-display italic text-text-primary mb-4">
               Resume
@@ -285,7 +285,9 @@ export default function Resume() {
               download="Tushar_Bhanderi_Resume.pdf"
               className="gradient-ring relative inline-flex items-center gap-2 rounded-full px-8 py-3.5 text-sm bg-text-primary text-bg transition-transform duration-300 hover:scale-105"
             >
-              <span className="relative z-10">Download Resume PDF ↗</span>
+              <span className="relative z-10 flex items-center gap-1.5">
+                Download Resume PDF <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
+              </span>
             </a>
           </motion.div>
         </div>

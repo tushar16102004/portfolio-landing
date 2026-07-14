@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 const FOCUS_ITEMS = [
@@ -32,6 +33,11 @@ const fadeUp = {
 
 export default function FocusAreas() {
   const tickerText = "DEVELOPMENT • DESIGN • DATA ANALYTICS • PROBLEM SOLVING • AI INTEGRATION • CORE DISCIPLINES • CREATIVE CODE • ";
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    setIsMobile(window.innerWidth < 768);
+  }, []);
 
   return (
     <section className="bg-bg py-16 md:py-24 border-b border-stroke overflow-hidden">
@@ -39,9 +45,9 @@ export default function FocusAreas() {
         
         {/* Header */}
         <motion.div
-          initial="hidden"
+          initial={isMobile ? "visible" : "hidden"}
           whileInView="visible"
-          viewport={{ once: true, margin: "-100px" }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeUp}
           className="mb-14 md:mb-20"
         >
@@ -61,12 +67,12 @@ export default function FocusAreas() {
           {FOCUS_ITEMS.map((item, i) => (
             <motion.div
               key={item.no}
-              initial="hidden"
+              initial={isMobile ? "visible" : "hidden"}
               whileInView="visible"
-              viewport={{ once: true, margin: "-80px" }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUp}
-              transition={{ delay: i * 0.1 }}
-              className="p-8 rounded-3xl border border-stroke bg-surface/10 hover:bg-surface/30 hover:border-white/20 transition-all duration-500 flex flex-col justify-between"
+              transition={{ delay: isMobile ? 0 : i * 0.1 }}
+              className="p-8 rounded-3xl border border-stroke bg-surface/10 hover:bg-surface/30 hover:border-white/20 transition-colors duration-500 flex flex-col justify-between"
             >
               <div>
                 <span className="block text-2xl font-display italic text-white/40 mb-6">

@@ -56,7 +56,7 @@ export default function Footer() {
     const ctx = gsap.context(() => {
       gsap.to(marqueeRef.current, {
         xPercent: -50,
-        duration: 40,
+        duration: 80,
         ease: "none",
         repeat: -1,
       });

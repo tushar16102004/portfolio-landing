@@ -138,8 +138,8 @@ export default function Explorations() {
             rel="noreferrer"
             className="gradient-ring relative hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-text-primary"
           >
-            <span className="relative z-10 flex items-center gap-2 bg-bg rounded-full px-1">
-              GitHub ↗
+            <span className="relative z-10 flex items-center gap-1.5 bg-bg rounded-full px-1">
+              GitHub <svg className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
             </span>
           </a>
         </motion.div>

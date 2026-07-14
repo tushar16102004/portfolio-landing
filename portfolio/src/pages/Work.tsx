@@ -44,9 +44,9 @@ export default function Work() {
           >
             <Link
               to="/"
-              className="inline-flex items-center gap-2 text-xs text-muted hover:text-text-primary transition-colors mb-8"
+              className="inline-flex items-center gap-1.5 text-xs text-muted hover:text-text-primary transition-colors mb-8"
             >
-              ← Back to Home
+              <svg className="w-3 h-3 mr-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" /></svg> Back to Home
             </Link>
             <h1 className="text-4xl md:text-5xl font-display italic text-text-primary mb-4">
               My Works

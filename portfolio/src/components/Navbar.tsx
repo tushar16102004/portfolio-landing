@@ -110,8 +110,8 @@ export default function Navbar() {
           href="mailto:tusharbhanderi1610@gmail.com"
           className="gradient-ring relative inline-flex items-center rounded-full text-xs sm:text-sm p-[0.5px]"
         >
-          <span className="relative z-10 flex items-center gap-1 bg-surface rounded-full backdrop-blur-md px-3 sm:px-4 py-0.5 sm:py-2 text-text-primary">
-            Say hi <span aria-hidden>↗</span>
+          <span className="relative z-10 flex items-center gap-1.5 bg-surface rounded-full backdrop-blur-md px-3 sm:px-4 py-0.5 sm:py-2 text-text-primary">
+            Say hi <svg className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" strokeWidth="3"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" /></svg>
           </span>
         </a>
       </div>

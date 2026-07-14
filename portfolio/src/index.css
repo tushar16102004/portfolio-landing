@@ -147,7 +147,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 25s linear infinite;
+  animation: marquee 80s linear infinite;
 }
 
 @media (prefers-reduced-motion: reduce) {
