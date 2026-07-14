@@ -196,7 +196,7 @@ export default function Explorations() {
                     {skill.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] text-white bg-black/50 backdrop-blur-sm px-2.5 py-0.5 rounded-full border border-white/20"
+                        className="text-[10px] text-white bg-black/70 backdrop-blur-sm px-2.5 py-1 rounded-full border border-white/10"
                       >
                         {tag}
                       </span>

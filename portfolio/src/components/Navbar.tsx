@@ -7,7 +7,10 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isResumePage = location.pathname === "/resume";
-  const [active, setActive] = useState(isResumePage ? "Resume" : "Home");
+  const isWorkPage = location.pathname === "/work";
+  const [active, setActive] = useState(
+    isResumePage ? "Resume" : isWorkPage ? "Work" : "Home"
+  );
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 100);
@@ -17,13 +20,13 @@ export default function Navbar() {
 
   // Sync active state when navigating
   useEffect(() => {
-    setActive(isResumePage ? "Resume" : "Home");
-  }, [isResumePage]);
+    setActive(isResumePage ? "Resume" : isWorkPage ? "Work" : "Home");
+  }, [isResumePage, isWorkPage]);
 
   const getHref = (link: string) => {
     if (link === "Resume") return "/resume";
-    if (link === "Home") return isResumePage ? "/" : "#home";
-    if (link === "Work") return isResumePage ? "/#work" : "#work";
+    if (link === "Work") return "/work";
+    if (link === "Home") return isResumePage || isWorkPage ? "/" : "#home";
     return `#${link.toLowerCase()}`;
   };
 

@@ -139,7 +139,7 @@ export default function Resume() {
                     {exp.tags.map((tag) => (
                       <span
                         key={tag}
-                        className="text-[10px] text-white/70 bg-white/5 px-2.5 py-0.5 rounded-full border border-white/10"
+                        className="text-[10px] text-white/70 bg-white/5 px-2.5 py-1 rounded-full border border-white/10"
                       >
                         {tag}
                       </span>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 interface Project {
   title: string;
@@ -73,14 +74,14 @@ export default function SelectedWorks() {
               launch.
             </p>
           </div>
-          <a
-            href="#work"
+          <Link
+            to="/work"
             className="gradient-ring relative hidden md:inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-sm text-text-primary"
           >
             <span className="relative z-10 flex items-center gap-2 bg-bg rounded-full px-1">
               View all work <span aria-hidden>→</span>
             </span>
-          </a>
+          </Link>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-12 gap-5 md:gap-6">
