@@ -23,6 +23,7 @@ export default function Navbar() {
     setActive(isResumePage ? "Resume" : isWorkPage ? "Work" : "Home");
   }, [isResumePage, isWorkPage]);
 
+
   const getHref = (link: string) => {
     if (link === "Resume") return "/resume";
     if (link === "Work") return "/work";
